@@ -27,3 +27,8 @@ if __name__=="__main__":
     print(False)
   else:
     print(True)
+
+'''
+TC -> O(N)
+SC -> O(N)
+'''
