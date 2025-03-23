@@ -19,3 +19,8 @@ if __name__=="__main__":
   n2.left, n2.right = n4, n5
   n3.left, n3.right = n6, n7
   print(depth(n1))
+
+'''
+TC -> O(N)
+SC -> O(N)
+'''
