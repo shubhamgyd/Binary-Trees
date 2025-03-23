@@ -9,17 +9,20 @@ def iterativeInOrderTraversal(root):
   st = []
   node = root
   ans = []
-  while True:
+  while node or len(st):
     if node != None:
       st.append(node)
       node = node.left
     else:
-      if len(st) == 0:
-        break
-      node = st[-1]
-      st.pop()
-      ans.append(node.data)
-      node = node.right
+      temp = st[-1].right
+      if temp == None:
+        temp = st.pop()
+        ans.append(temp.data)
+        while len(st) > 0 and temp == st[-1].right:
+          temp = st.pop()
+          ans.append(temp.data)
+      else:
+        node = temp
   
   return ans
 
